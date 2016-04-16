@@ -9,7 +9,7 @@ import android.os.IBinder;
 import android.util.Log;
 
 public class BroadcastService extends Service {
-	
+
 	private static final String TAG = "BroadcastService";
 	public static final String BROADCAST_ACTION = "com.websmithing.broadcasttest.displayevent";
 	private final Handler handler = new Handler();
@@ -38,7 +38,9 @@ public class BroadcastService extends Service {
 	};
 
 	private void DisplayLoggingInfo() {
-		Log.d(TAG, "entered DisplayLoggingInfo");
+		
+		
+		//Log.d(TAG, "entered DisplayLoggingInfo");
 
 		intent.putExtra("time", new Date().toLocaleString());
 		intent.putExtra("counter", String.valueOf(++counter));
